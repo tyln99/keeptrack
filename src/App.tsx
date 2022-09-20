@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ProjectsPage from "./projects/ProjectsPage";
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,6 +8,8 @@ import {
   NavLink,
 } from "react-router-dom";
 import HomePage from "./home/HomePage";
+import ProjectsPage from "./projects/ProjectsPage";
+import ProjectPage from "./projects/ProjectPage";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/projects" element={<ProjectsPage />}></Route>
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:id" element={<ProjectPage />} />
         </Routes>
       </div>
     </Router>

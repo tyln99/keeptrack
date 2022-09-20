@@ -3,6 +3,7 @@ import { MOCK_PROJECTS } from "./MockProjects";
 import { Project } from "./Project";
 import ProjectList from "./ProjectList";
 import { projectApi } from "./ProjectAPI";
+import { useParams } from "react-router-dom";
 
 function ProjectsPage() {
   const [projects, setProjects] = useState<Project[]>([]);
